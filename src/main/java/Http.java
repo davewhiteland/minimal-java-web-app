@@ -20,7 +20,7 @@ public class Http {
   static class RootHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange req) throws IOException {
-      String message = "<h1>Hello CS2810/CS2815/CS3811!</h1>";
+      String message = "<h1>Hello CS1813!</h1>";
 
       req.sendResponseHeaders(200, message.length());
 
