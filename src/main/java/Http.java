@@ -22,6 +22,9 @@ public class Http {
     public void handle(HttpExchange req) throws IOException {
       String message = "<h1>Hello CS1813!</h1>";
 
+      Headers headers = req.getResponseHeaders();
+      headers.add("Content-Type", "text/html; charset=UTF-8");
+
       req.sendResponseHeaders(200, message.length());
 
       OutputStream res = req.getResponseBody();
